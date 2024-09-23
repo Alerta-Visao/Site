@@ -1,0 +1,159 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #444141;
+}
+
+#areaLogin{
+    border: 1px solid white;
+    margin-top: 2%;
+    border-radius: 10px;
+    margin-left: 33%;
+    margin-right: 33%;
+    padding: 3%;
+    padding-bottom: 1%;
+}
+
+.textoBranco{
+    color: white;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#botaoEntrar{
+    text-decoration: none;
+    color: black;
+    background-color: #FACC67;
+    border-radius: 5px;
+    font-size: 150%;
+    padding-right: 20%;
+    padding-left: 20%;
+    font-weight: bold;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.inputLogin{
+    background-color: #444141;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 125%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;
+    padding-left: 2%;
+}
+
+/* --------------------Área Login----------------- */
+#botaoCadastrar{
+    color: #FACC67;
+    font-size: 130%;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* ------------------Área Cadastro------------------ */
+#nomeCompleto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginNome{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    width: 80%;
+    color: white;
+    padding-left: 2%;
+}
+
+#loginSobrenome{
+    margin-left: 3%;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    width: 80%;
+    color: white;
+    padding-left: 2%;
+}
+
+.inputCadastro{
+    width: 98%;
+    padding-left: 2%;
+}
+
+/* ---------------------Página Inicial-------------------- */
+header{
+    background-color: #262626;
+    display: grid;
+    padding: 0.5%;
+}
+
+#logoCabecalho{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    margin-left: 50%;
+}
+
+.menu{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    color: white;
+    font-size: 130%;
+    margin-top: 10%;
+}
+
+#pesquisa{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    border-radius: 10px;
+    font-size: 130%;
+    background-color: #262626;
+    border: 1px solid white;
+    background-image: url(./imagens/iconePesquisa.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 95%;
+    background-size: 8%;
+    padding-left: 1%;
+    height: 50%;
+    width: 50%;
+    color: white;
+    margin-left: 40%;
+    margin-top: 4%;
+}
+
+
+#secao1{
+    margin-top: 2%;
+    display: grid;
+}
+
+.tituloBranco{
+    color: white;
+}
+
+#secao1BoasVindas{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+#secao1QuemSomos{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    margin-left: 28%;
+}
