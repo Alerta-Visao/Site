@@ -18,7 +18,7 @@
                 Quem Somos
             </a>
             <a style="text-decoration: none; font-weight: bold;" 
-                class="menu" href="compra.html">
+                class="menu">
                 Comprar
             </a>
             <a class="menu">
@@ -26,13 +26,21 @@
             </a>
     </header>
     <center>
-        <div id="cartao">
-            <h1 style="margin: 0; margin-bottom: 10%;">Dados do Cartão</h1>
-            <input class="inputCartao" type="text" placeholder="Número do cartão">
-            <input class="inputCartao" type="text" placeholder="Data de validade">
-            <input class="inputCartao" type="text" placeholder="Código de segurança">
-            <input style="margin-bottom: 15%;" class="inputCartao" type="text" placeholder="Nome do titular">
-            <a id="botaoEntrar" href="">Finalizar pedido</a>
+        <div style="display: flex;
+                    justify-content: center;">
+            <a style="margin-left: 2%;
+                    margin-top: 2%;" 
+            href="formasPagamento.html">
+                <img src="./imagens/botaoVoltar.png" alt="">
+            </a>
+            <div id="cartao">
+                <h1 style="margin: 0; margin-bottom: 10%;">Dados do Cartão</h1>
+                <input class="inputCartao" type="text" placeholder="Número do cartão">
+                <input class="inputCartao" type="text" placeholder="Data de validade">
+                <input class="inputCartao" type="text" placeholder="Código de segurança">
+                <input style="margin-bottom: 15%;" class="inputCartao" type="text" placeholder="Nome do titular">
+                <a id="botaoEntrar" href="pagamentoRealizado.html">Finalizar pedido</a>
+            </div>
         </div>
     </center>
 </body>
