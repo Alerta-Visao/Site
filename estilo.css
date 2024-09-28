@@ -1,7 +1,12 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url(./fontes/Rubik/Rubik-VariableFont_wght.ttf);
+}
 body{
     margin: 0;
     padding: 0;
     background-color: #444141;
+    font-family: 'Rubik';
 }
 
 #areaLogin{
@@ -195,6 +200,21 @@ header{
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 2%;
-    width: 100%;
+    width: 97%;
     margin-top: 5%;
+}
+
+/*----------------------------Suporte--------------------------*/
+#secao1Faq{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+#secao1Chamado{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
 }

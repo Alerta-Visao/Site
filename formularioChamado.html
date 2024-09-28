@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Formulário de chamado</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+            <img id="logoCabecalho" src="./imagens/logoCabecalho.png" alt="">
+        </a>
+        <input id="pesquisa" type="text">
+            <a style="text-decoration: none;" 
+                class="menu" href="quemSomos.html">
+                Quem Somos
+            </a>
+            <a style="text-decoration: none;" 
+                class="menu" href="compra.html">
+                Comprar
+            </a>
+            <a style="font-weight: bold;" class="menu">
+                Suporte
+            </a>
+            <img src="imagens/botaoAcessarUsuario.png" alt="">
+    </header>
+    <center>
+        <div style="display: flex;
+                    justify-content: center;">
+            <a style="margin-left: 2%;
+                    margin-top: 2%;" 
+            href="formasPagamento.html">
+                <img src="./imagens/botaoVoltar.png" alt="">
+            </a>
+            <div id="cartao">
+                <h1 style="margin: 0; margin-bottom: 10%;">Formulário de chamado</h1>
+                <div id="nomeCompleto">
+                    <input style="background-color: #cccccc; border: 1px solid black" id="loginNome" class="inputLogin" type="text" placeholder="Nome">
+                    <input style="background-color: #cccccc; border: 1px solid black" id="loginSobrenome" class="inputLogin" type="text" placeholder="Sobrenome">
+                </div>
+                <input class="inputCartao" type="text" placeholder="Telefone">
+                <input class="inputCartao" type="text" placeholder="Email">
+                <select style="color: #666565;
+                                padding-left: 1%;
+                                width: 100%;" 
+                        class="inputCartao" id="">
+                    <option disabled selected value="">Selecionar Categoria</option>
+                    <option value="">Problemas com o pagamento</option>
+                    <option value="">Problemas com a entrega</option>
+                    <option value="">Devoluções e troca</option>
+                    <option value="">Problemas na conta e acesso</option>
+                    <option value="">Outros</option>
+                </select><br>
+                <input class="inputCartao" style="margin-bottom: 15%;" type="text" placeholder="Descreva o seu problema"><br>
+                <a id="botaoEntrar" href="pagamentoRealizado.html">Finalizar pedido</a>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
