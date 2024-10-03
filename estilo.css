@@ -100,9 +100,21 @@ header{
     gap: 5%;
 }
 
+.offcanvas{
+    height: 12%;
+}
+
 .menu{
     color: white;
     font-size: 130%;
+    text-decoration: none;
+}
+
+#botaoLogin{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 150%;
 }
 
 #pesquisa{
@@ -176,8 +188,8 @@ header{
     padding-right: 10%;
 }
 
-#secao1Titulo h1{
-    width: 1500px;
+#secao1Titulo h2{
+    width: 100%;
 }
 
 /*-----------------------Dados Cartão--------------------*/
@@ -200,7 +212,7 @@ header{
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 2%;
-    width: 97%;
+    width: 100%;
     margin-top: 5%;
 }
 
@@ -217,4 +229,29 @@ header{
     grid-row-end: 1;
     grid-column-start: 2;
     grid-column-end: 2;
+}
+
+/*--------------------------- Relatorio--------------------- */
+#secaoRelatorio{
+    margin-top: 2%;
+}
+
+#secaoRelatorio1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#secaoRelatorio2{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#headerAdmin{
+    gap: 5%;
+}
+
+#headerAdmin #pesquisa{
+    background-size: 5%;
+    width: 50%;
 }
