@@ -1,5 +1,5 @@
 <?php
-    namespace PHP\DAO;
+    namespace Site\PHP\DAO;
 
     class Conexao{
         
@@ -7,7 +7,7 @@
             try{
                 $conn = mysqli_connect('localhost', 'root', '', 'meuBone'); //fazendo a conexão(local, usuario, senha, nome do banco de dados)
                 if($conn){
-                    echo "<br>Conectado com Sucesso!";
+                    // echo "<br>Conectado com Sucesso!";
                     return $conn;
                 }
                 echo "<br>Algo deu errado!";

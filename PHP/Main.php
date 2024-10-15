@@ -1,9 +1,9 @@
 <?php
-    namespace PHP;
+    namespace Site\PHP;
 
-    require('DAO/conexao.php');
+    require_once('DAO/conexao.php');
 
-    use PHP\DAO\Conexao;
+    use Site\PHP\DAO\Conexao;
 
     $conexao = new Conexao();
 
