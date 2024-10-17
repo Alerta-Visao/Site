@@ -6,55 +6,49 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilo.css">
-    <script src="./script.js"></script>
-    <title>Cartão</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Vendas Realizadas</title>
 </head>
 <body>
-    <header>
-        <a href="index.html">
+    <header id="headerAdmin">
+        <a href="index.php">
             <img id="logoCabecalho" src="./imagens/logoCabecalho.png" alt="">
         </a>
         <input id="pesquisa" type="text">
-            <a style="text-decoration: none;" 
-                class="menu" href="quemSomos.html">
-                Quem Somos
-            </a>
-            <a style="text-decoration: none; font-weight: bold;" 
-                class="menu" href="compra.html">
-                Comprar
-            </a>
-            <a style="text-decoration: none;" 
-            class="menu" href="suporte.html">
-                Suporte
-            </a>
             <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <img src="imagens/botaoAcessarUsuario.png" alt="">
             </a>
                 <!-- MenuUsuario -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header">
-                        <a id="botaoLogin" href="loginCliente.html" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
+                        <a id="botaoLogin" href="loginCliente.php" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                 </div>
                 <!-- ------------------------------- -->
     </header>
-    <center>
-        <div style="display: flex;
-                    justify-content: center;">
-            <a style="margin-left: 2%;
-                    margin-top: 2%;" 
-            href="formasPagamento.html">
+    <center class="textoBranco" style="margin-top: 1%">
+        <div style="margin-bottom: 2%;" id="secao1Titulo">
+            <a href="relatorio.php">
                 <img src="./imagens/botaoVoltar.png" alt="">
             </a>
-            <div id="cartao">
-                <h2 style="margin: 0; margin-bottom: 10%;">Dados do Cartão</h2>
-                <input class="inputCartao" type="text" placeholder="Número do cartão">
-                <input class="inputCartao" type="text" placeholder="Data de validade">
-                <input class="inputCartao" type="text" placeholder="Código de segurança">
-                <input style="margin-bottom: 15%;" class="inputCartao" type="text" placeholder="Nome do titular">
-                <a id="botaoEntrar" href="pagamentoRealizado.html">Finalizar pedido</a>
-            </div>
+            <h2>Vendas Realizadas</h2>
+        </div>
+        <div style="text-align: center;" class="container-fluid">
+            <table class="table table-hover">
+                <thead>
+                    <th>ID do pedido</th>
+                    <th>Informação</th>
+                    <th>Status</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>OLA</td>
+                        <td>OLA</td>
+                        <td>OLA</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </center>
 </body>

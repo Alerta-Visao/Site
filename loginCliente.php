@@ -1,6 +1,6 @@
 <?php
     namespace Site;
-
+    session_start();
     require_once('PHP/DAO/Conexao.php');
     require_once('PHP/DAO/Consultar.php');
     use Site\PHP\DAO\Conexao;
@@ -36,13 +36,19 @@
                     if(isset($_POST['inputUsuario']) && isset($_POST['inputSenha'])){
                         $usuario = $_POST['inputUsuario'];
                         $senha = $_POST['inputSenha'];
-                        $consultar->consultarLogin($conexao, 'Acompanhante', 'login', $usuario,
-                                                    'senha', $senha);
+                        if($consultar->consultarLogin($conexao, 'Acompanhante', 'login', $usuario,'senha', $senha) == true)
+                        {
+                            $_SESSION['usuario'] = $usuario;
+                            header("Location: index.php");
+                        }
+                        else{
+                            echo "<div style='color: red; font-weight: bold'>Usuário e senha não válidos!</div>"; 
+                        }
                     }
                     
                 ?>
-                <a id="botaoCadastrar" href="cadastro.html">Cadastrar-se</a><br><br><br>
-                <a style="font-size: 120%; font-weight: bold;" class="textoBrancoLogin" href="loginAdmin.html">Área da empresa</a>
+                <a id="botaoCadastrar" href="cadastro.php">Cadastrar-se</a><br><br><br>
+                <a style="font-size: 120%; font-weight: bold;" class="textoBrancoLogin" href="loginAdmin.php">Área da empresa</a>
             </form>
         </div>
     </center>

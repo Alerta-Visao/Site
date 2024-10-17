@@ -6,80 +6,56 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilo.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Faixa Etária</title>
+    <script src="./script.js"></script>
+    <title>Cartão</title>
 </head>
 <body>
-    <header id="headerAdmin">
-        <a href="index.html">
+    <header>
+        <a href="index.php">
             <img id="logoCabecalho" src="./imagens/logoCabecalho.png" alt="">
         </a>
         <input id="pesquisa" type="text">
+            <a style="text-decoration: none;" 
+                class="menu" href="quemSomos.php">
+                Quem Somos
+            </a>
+            <a style="text-decoration: none; font-weight: bold;" 
+                class="menu" href="compra.php">
+                Comprar
+            </a>
+            <a style="text-decoration: none;" 
+            class="menu" href="suporte.php">
+                Suporte
+            </a>
             <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <img src="imagens/botaoAcessarUsuario.png" alt="">
             </a>
                 <!-- MenuUsuario -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header">
-                        <a id="botaoLogin" href="loginCliente.html" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
+                        <a id="botaoLogin" href="loginCliente.php" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                 </div>
                 <!-- ------------------------------- -->
     </header>
-    <center class="textoBranco" style="margin-top: 1%">
-        <div style="margin-bottom: 2%;" id="secao1Titulo">
-            <a href="relatorio.html">
+    <center>
+        <div style="display: flex;
+                    justify-content: center;">
+            <a style="margin-left: 2%;
+                    margin-top: 2%;" 
+            href="formasPagamento.php">
                 <img src="./imagens/botaoVoltar.png" alt="">
             </a>
-            <h2>Faixa etária dos usuários</h2>
-        </div>
-        <div style="background-color: white; width: 50%;">
-            <canvas id="grafico"></canvas>
+            <div id="cartao">
+                <h2 style="margin: 0; margin-bottom: 10%;">Dados do Cartão</h2>
+                <input class="inputCartao" type="text" placeholder="Número do cartão">
+                <input class="inputCartao" type="text" placeholder="Data de validade">
+                <input class="inputCartao" type="text" placeholder="Código de segurança">
+                <input style="margin-bottom: 15%;" class="inputCartao" type="text" placeholder="Nome do titular">
+                <a id="botaoEntrar" href="pagamentoRealizado.php">Finalizar pedido</a>
+            </div>
         </div>
     </center>
 </body>
 </html>
-
-
-<script>
-     const ctx = document.getElementById('grafico');
-
-new Chart(ctx, {
-  type: 'pie',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow'],
-    datasets: [{
-      label: '# of Votes',
-      data: [50, 25, 25],
-      borderWidth: 1,
-      backgroundColor: ['#FACC67', '#C8C0B0', '#444141']
-    }]
-  },
-  options: {
-    scales: {
-      x: {
-        grid: {
-          display: false,
-        },
-        ticks: {
-          display: false //Remover eixo X
-        }
-      },
-      y: {
-        grid: {
-          display: false
-        },
-        ticks: {
-          display: false //Remover eixo y
-        }
-      },
-    },
-    plugins: {
-      legend: {
-        position: 'right',
-      },
-    }
-  }
-});
-</script>

@@ -13,8 +13,8 @@
             <p style="font-weight: bold;" class="textoBrancoLogin">Login</p><br>
             <input class="inputLogin" type="text" placeholder="Usuário"><br><br>
             <input class="inputLogin" type="password" placeholder="Senha"><br><br><br>
-            <a id="botaoEntrar" href="relatorio.html">Entrar</a><br><br><br><br>
-            <a style="font-size: 120%; font-weight: bold;" class="textoBrancoLogin" href="loginCliente.html">Área do cliente</a>
+            <a id="botaoEntrar" href="relatorio.php">Entrar</a><br><br><br><br>
+            <a style="font-size: 120%; font-weight: bold;" class="textoBrancoLogin" href="loginCliente.php">Área do cliente</a>
         </div>
     </center>
 </body>

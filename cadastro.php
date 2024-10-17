@@ -58,17 +58,23 @@
                             $usuario = $_POST['inputUsuario'];
                             $senha = $_POST['inputSenha'];
                             
-                            if($consultar->consultarCadastro($conexao, 'Acompanhante', 'login', $usuario) == true){
-                                echo "Usuário já existente";
+                            if($usuario == "" && $senha == ""){
+                                echo "<div style='color: red; font-weight: bold'>Os campos usuários e senha não podem
+                                        estar vazios</div>";
                             }
                             else{
-                                $inserir->cadastrarAcompanhante($conexao, $nome, $sobrenome, $email,
-                                                                $telefone, $usuario, $senha);
-                                header("Location: cadastroAssistida.php");
+                                if($consultar->consultarCadastro($conexao, 'Acompanhante', 'login', $usuario) == true){
+                                    echo "<div style='color: red; font-weight: bold'>Usuário já existente</div>";
+                                }
+                                else{
+                                    $inserir->cadastrarAcompanhante($conexao, $nome, $sobrenome, $email,
+                                                                    $telefone, $usuario, $senha);
+                                    header("Location: cadastroAssistida.php");
+                                }
                             }
                         }
                     ?>
-                    <a id="botaoCadastrar" href="loginCliente.html">Login</a><br>
+                    <a id="botaoCadastrar" href="loginCliente.php">Login</a><br>
                 </form>
             </div>
         </center>

@@ -11,20 +11,20 @@
 </head>
 <body>
     <header>
-        <a href="index.html">
+        <a href="index.php">
             <img id="logoCabecalho" src="./imagens/logoCabecalho.png" alt="">
         </a>
         <input id="pesquisa" type="text">
             <a style="text-decoration: none; font-weight: bold;" 
-                class="menu" href="quemSomos.html">
+                class="menu" href="quemSomos.php">
                 Quem Somos
             </a>
             <a style="text-decoration: none;" 
-                class="menu" href="compra.html">
+                class="menu" href="compra.php">
                 Comprar
             </a>
             <a style="text-decoration: none;" 
-            class="menu" href="suporte.html">
+            class="menu" href="suporte.php">
                 Suporte
             </a>
             <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
@@ -33,7 +33,7 @@
                 <!-- MenuUsuario -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header">
-                        <a id="botaoLogin" href="loginCliente.html" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
+                        <a id="botaoLogin" href="loginCliente.php" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                 </div>

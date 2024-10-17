@@ -1,3 +1,13 @@
+<?php
+    namespace Site;
+    session_start();
+
+    function deslogar(){
+        $_SESSION['usuario'] = "";
+        header("Location: index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +16,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilo.css">
-    <script src="./script.js"></script>
     <title>Página Incial</title>
 </head>
 <body>
@@ -16,35 +25,49 @@
         </a>
         <input id="pesquisa" type="text">
             <a style="text-decoration: none;" 
-                class="menu" href="quemSomos.html">
+                class="menu" href="quemSomos.php">
                 Quem Somos
             </a>
             <a style="text-decoration: none;" 
-                class="menu" href="compra.html">
+                class="menu" href="compra.php">
                 Comprar
             </a>
             <a style="text-decoration: none;" 
-            class="menu" href="suporte.html">
+            class="menu" href="suporte.php">
                 Suporte
             </a>
             <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <img src="imagens/botaoAcessarUsuario.png" alt="">
             </a>
-                <!-- MenuUsuario -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                        <a id="botaoLogin" href="loginCliente.html" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <!-- MenuUsuario -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <div style="display: flex; flex-direction: column" >
+                    <?php
+                        if($_SESSION['usuario'] != ""){
+                            echo 'Bem vindo ', $_SESSION['usuario'];
+                            // variavel sair recebe 1 para executar a função do php
+                            echo '<a href="index.php?sair=1">Sair</a>';
+                            if(isset($_GET['sair']) == 1){
+                                deslogar();
+                            }
+                        }
+                        else{
+                            echo '<a id="botaoLogin" href="loginCliente.php" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>';
+                        }
+                    ?>
                     </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <!-- ------------------------------- -->
+            </div>
+            <!-- ------------------------------- -->
     </header>
     <center>
         <div id="secao1">
             <div id="secao1BoasVindas">
                 <h2 style="margin-bottom: 10%;" class="textoBranco">Boas Vindas!</h2>
                 <img style="margin-bottom: 10%;" src="./imagens/chapeuModelo.png" alt=""><br>
-                <a id="botaoEntrar" href="compra.html">
+                <a id="botaoEntrar" href="compra.php">
                     Ver detalhes
                 </a>
             </div>
@@ -61,7 +84,7 @@
                     sint occaecat<br> cupidatat non proident, sunt in
                     culpa qui<br> officia deserunt mollit anim id est<br>
                     laborum...</p>
-                <a href="quemSomos.html" id="botaoCadastrar">Ver mais</a>
+                <a href="quemSomos.php" id="botaoCadastrar">Ver mais</a>
             </div>
         </div>
     </center>

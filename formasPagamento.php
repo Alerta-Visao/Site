@@ -11,20 +11,20 @@
 </head>
 <body>
     <header>
-        <a href="index.html">
+        <a href="index.php">
             <img id="logoCabecalho" src="./imagens/logoCabecalho.png" alt="">
         </a>
         <input id="pesquisa" type="text">
             <a style="text-decoration: none;" 
-                class="menu" href="quemSomos.html">
+                class="menu" href="quemSomos.php">
                 Quem Somos
             </a>
             <a style="text-decoration: none; font-weight: bold;" 
-                class="menu" href="compra.html">
+                class="menu" href="compra.php">
                 Comprar
             </a>
             <a style="text-decoration: none;" 
-            class="menu" href="suporte.html">
+            class="menu" href="suporte.php">
                 Suporte
             </a>
             <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
@@ -33,7 +33,7 @@
                 <!-- MenuUsuario -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header">
-                        <a id="botaoLogin" href="loginCliente.html" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
+                        <a id="botaoLogin" href="loginCliente.php" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
     </header>
     <center style="margin-top: 1%;">
         <div id="secao1Titulo">
-            <a href="compra.html">
+            <a href="compra.php">
                 <img src="./imagens/botaoVoltar.png" alt="">
             </a>
             <h2 class="textoBranco">Escolha a forma que deseja pagar</h2>
@@ -61,7 +61,7 @@
                         margin-left: 3%; margin-right: 30%;" class="textoBranco">
                 Cartão de crédito
             </div>
-            <a href="cartao.html" style="font-size: 130%; padding-left: 2%;
+            <a href="cartao.php" style="font-size: 130%; padding-left: 2%;
                       padding-right: 2%;"     
                 id="botaoEntrar">Selecionar</a>
         </div>
@@ -79,7 +79,7 @@
                         margin-left: 3%; margin-right: 42%;" class="textoBranco">
                 Pix
             </div>
-            <a href="pix.html" style="font-size: 130%; padding-left: 2%;
+            <a href="pix.php" style="font-size: 130%; padding-left: 2%;
             padding-right: 2%;" id="botaoEntrar">Selecionar</a>
         </div>
     </center>

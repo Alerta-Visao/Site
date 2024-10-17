@@ -11,7 +11,7 @@
 </head>
 <body>
     <header id="headerAdmin">
-        <a href="index.html">
+        <a href="index.php">
             <img id="logoCabecalho" src="./imagens/logoCabecalho.png" alt="">
         </a>
         <input id="pesquisa" type="text">
@@ -21,7 +21,7 @@
                 <!-- MenuUsuario -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header">
-                        <a id="botaoLogin" href="loginCliente.html" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
+                        <a id="botaoLogin" href="loginCliente.php" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
     </header>
     <center class="textoBranco" style="margin-top: 1%">
         <div style="margin-bottom: 2%;" id="secao1Titulo">
-            <a href="relatorio.html">
+            <a href="relatorio.php">
                 <img src="./imagens/botaoVoltar.png" alt="">
             </a>
             <h2>Seus fornecedores</h2>

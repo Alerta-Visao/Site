@@ -1,6 +1,5 @@
 <?php
     namespace Site\PHP\DAO;
-
     require_once('conexao.php');
 
     use Site\PHP\DAO\Conexao;
@@ -23,12 +22,11 @@
                 //enquanto tiver dados para consultar
                 while($dados = mysqli_fetch_Array($result)){
                     if($dados["login"] == $valorCampo && $dados["senha"] == $valorCampo2){
-                        echo "Entrou";
-                        return; //Encerrando um processo para ver só um dado específico
+                        // echo "Entrou";
+                        return true;
                     }
-                    echo "Usuário digitado não é válido!"; 
                 }
-                    
+                return false;
             }
             catch(Exeception $erro){
                 echo $erro;
