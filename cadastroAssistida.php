@@ -1,6 +1,6 @@
 <?php
     namespace Site;
-
+    session_start();
     require_once('PHP/DAO/Conexao.php');
     require_once('PHP/DAO/Inserir.php');
     require_once('PHP/DAO/Consultar.php');
@@ -52,9 +52,16 @@
                         $email = $_POST['inputEmail'];
                         $telefone = $_POST['inputTelefone'];
                         
+                        
+                        $inserir->cadastrarAcompanhante($conexao, $_SESSION['acompanhanteNome'], $_SESSION['acompanhanteSobrenome'],
+                                                        $_SESSION['acompanhanteTelefone'], $_SESSION['acompanhanteEmail'],
+                                                        $_SESSION['acompanhanteUsuario'], $_SESSION['acompanhanteSenha']);
+                        $codAcompanhante = $consultar->pegarDado($conexao, 'Acompanhante', 'login', $_SESSION['acompanhanteUsuario'], 'codigo');
                         $inserir->cadastrarAssistida($conexao, $nome, $sobrenome, $email,
-                                                        $telefone);
-                        header("Location: index.html");
+                                                        $telefone, $codAcompanhante);
+                        $_SESSION['nome'] = $consultar->pegarDado($conexao, 'Acompanhante', 'login', $_SESSION['acompanhanteUsuario'], 'nome');
+                        $_SESSION['email'] = $consultar->pegarDado($conexao, 'Acompanhante', 'login', $_SESSION['acompanhanteUsuario'], 'email');
+                        header("Location: index.php");
                     }    
                 ?>
                 <a id="botaoCadastrar" href="cadastro.php">Voltar</a><br>

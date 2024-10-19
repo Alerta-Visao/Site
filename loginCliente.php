@@ -38,7 +38,8 @@
                         $senha = $_POST['inputSenha'];
                         if($consultar->consultarLogin($conexao, 'Acompanhante', 'login', $usuario,'senha', $senha) == true)
                         {
-                            $_SESSION['usuario'] = $usuario;
+                            $_SESSION['nome'] = $consultar->pegarDado($conexao, 'Acompanhante', 'login', $usuario, 'nome');
+                            $_SESSION['email'] = $consultar->pegarDado($conexao, 'Acompanhante', 'login', $usuario, 'email');
                             header("Location: index.php");
                         }
                         else{

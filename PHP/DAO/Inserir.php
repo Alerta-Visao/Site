@@ -43,14 +43,15 @@
             string $sobrenome,
             string $telefone,
             string $email,
+            int $codAcompanhante
         )
         {
             try{
                 $conn = $conexao->conectar();//Abrir a conexão com o banco
                 $sql  = "Insert into assistida 
-                (nome, sobrenome, telefone, email) 
+                (nome, sobrenome, telefone, email, codAcompanhante) 
                 values ('$nome','$sobrenome','$telefone',
-                '$email')";
+                '$email', $codAcompanhante)";
                 $result = mysqli_query($conn, $sql);
 
                 //Fechar a conexão

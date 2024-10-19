@@ -1,6 +1,6 @@
 <?php
     namespace Site;
-
+    session_start();
     require_once('PHP/DAO/Conexao.php');
     require_once('PHP/DAO/Inserir.php');
     require_once('PHP/DAO/Consultar.php');
@@ -67,8 +67,12 @@
                                     echo "<div style='color: red; font-weight: bold'>Usuário já existente</div>";
                                 }
                                 else{
-                                    $inserir->cadastrarAcompanhante($conexao, $nome, $sobrenome, $email,
-                                                                    $telefone, $usuario, $senha);
+                                    $_SESSION['acompanhanteNome'] = $nome;
+                                    $_SESSION['acompanhanteSobrenome'] = $sobrenome;
+                                    $_SESSION['acompanhanteTelefone'] = $telefone;
+                                    $_SESSION['acompanhanteEmail'] = $email;
+                                    $_SESSION['acompanhanteUsuario'] = $usuario;
+                                    $_SESSION['acompanhanteSenha'] = $senha;
                                     header("Location: cadastroAssistida.php");
                                 }
                             }

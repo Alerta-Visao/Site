@@ -1,3 +1,13 @@
+<?php
+    namespace Site;
+    session_start();
+
+    function deslogar(){
+        $_SESSION['nome'] = "";
+        header("Location: index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,12 +29,33 @@
                 <img src="imagens/botaoAcessarUsuario.png" alt="">
             </a>
                 <!-- MenuUsuario -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                        <a id="botaoLogin" href="loginCliente.php" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                </div>
+                <?php
+                    if($_SESSION['nome'] != ""){
+                        echo '<div style="border-radius: 10px; height: 20%; width: 20%" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">';
+                        echo '<div style="display: flex; align-items: center;border-bottom:0.5px solid black;" class="offcanvas-header">';
+                        echo '<img src="./imagens/iconeUsuario.png"/>';
+                        echo '<div style="display: flex; flex-direction: column; margin-left: 8%">';
+                        echo '<h5>Bem vindo ', $_SESSION['nome'], '</h5>';
+                        echo $_SESSION['email'];
+                        echo '</div>';
+                        echo '</div>';
+                        echo '<div class="offcanvas-body">';
+                        // variavel sair recebe 1 para executar a função do php
+                        echo '<a style="text-decoration: none; color: black" href="index.php?sair=1">Sair</a>';
+                        echo '</div>';
+                        echo '</div>';
+                        if(isset($_GET['sair']) == 1){
+                            deslogar();
+                        }
+                    }
+                    else{
+                        echo '<div style="border-radius: 10px; height: 10%; width: 15%"" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">';
+                        echo '<div class="offcanvas-header">';
+                        echo '<a id="botaoLogin" href="loginCliente.php" class="offcanvas-title" id="offcanvasRightLabel">Fazer Login</a>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                ?>
                 <!-- ------------------------------- -->
     </header>
     <center class="textoBranco" style="margin-top: 1%">
