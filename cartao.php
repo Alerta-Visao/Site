@@ -42,7 +42,7 @@
             </a>
                 <!-- MenuUsuario -->
                 <?php
-                    if($_SESSION['nome'] != ""){
+                    if(isset($_SESSION['nome']) && $_SESSION['nome'] != ""){
                         echo '<div style="border-radius: 10px; height: 20%; width: 20%" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">';
                         echo '<div style="display: flex; align-items: center;border-bottom:0.5px solid black;" class="offcanvas-header">';
                         echo '<img src="./imagens/iconeUsuario.png"/>';

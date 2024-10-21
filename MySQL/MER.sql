@@ -33,7 +33,7 @@ create table Usuario(
     senha varchar(100) not  null
 )Engine=InnoDB;
 
-
+show tables;
 alter table Assistida add constraint aacompanhante foreign key(codAcompanhante)
 references Acompanhante(codigo);
 
