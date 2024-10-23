@@ -1,6 +1,6 @@
 <?php
     namespace Site\PHP\DAO;
-    require_once('conexao.php');
+    require_once('Conexao.php');
 
     use Site\PHP\DAO\Conexao;
 

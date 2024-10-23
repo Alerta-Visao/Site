@@ -5,7 +5,7 @@
         
         function conectar(){
             try{
-                $conn = mysqli_connect('localhost', 'senac', '123', 'meuBone'); //fazendo a conexão(local, usuario, senha, nome do banco de dados)
+                $conn = mysqli_connect('localhost', 'root', '', 'meuBone'); //fazendo a conexão(local, usuario, senha, nome do banco de dados)
                 if($conn){
                     // echo "<br>Conectado com Sucesso!";
                     return $conn;
