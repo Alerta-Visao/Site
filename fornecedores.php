@@ -75,10 +75,65 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>OLA</td>
-                        <td>OLA</td>
-                        <td>OLA</td>
-                        <td>OLA</td>
+                        <td>123456789</td>
+                        <td>Bonesecia</td>
+                        <td>Resposável pela venda de bones</td>
+                        <td>ativo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+        <div style="text-align: center;" class="container-fluid">
+            <table class="table table-hover">
+                <thead>
+                    <th>ID do fornecedor</th>
+                    <th>Nome</th>
+                    <th>Informação</th>
+                    <th>Status</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1827345681</td>
+                        <td>Amantes de arduino</td>
+                        <td>Resposável pela venda de arduinos</td>
+                        <td>ativo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  </div>
+        <div style="text-align: center;" class="container-fluid">
+            <table class="table table-hover">
+                <thead>
+                    <th>ID do fornecedor</th>
+                    <th>Nome</th>
+                    <th>Informação</th>
+                    <th>Status</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>092456781</td>
+                        <td>Sensisotimesntos</td>
+                        <td>Resposável pela venda de sensores</td>
+                        <td>ativo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="text-align: center;" class="container-fluid">
+            <table class="table table-hover">
+                <thead>
+                    <th>ID do fornecedor</th>
+                    <th>Nome</th>
+                    <th>Informação</th>
+                    <th>Status</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>083215223</td>
+                        <td>Design alternativos</td>
+                        <td>Resposável pela ajuste do bone</td>
+                        <td>ativo</td>
                     </tr>
                 </tbody>
             </table>

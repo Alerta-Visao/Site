@@ -85,7 +85,19 @@
                 <input class="inputCartao" type="text" placeholder="Código de segurança">
                 <input style="margin-bottom: 15%;" class="inputCartao" type="text" placeholder="Nome do titular">
                 <a id="botaoEntrar" href="pagamentoRealizado.php">Finalizar pedido</a>
-            </div>
+                <center>
+        
+                <?php
+                 
+                    //Declarando as variváveis
+                    $numeroCartao = "";
+                    $dataValidade = "";
+                    $codSeguranca = "";
+                    $nomeTitular = "";
+ 
+                ?>
+              
+            </form>
         </div>
     </center>
 </body>

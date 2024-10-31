@@ -1,13 +1,13 @@
 <?php
     namespace Site;
     session_start();
-
+ 
     function deslogar(){
         $_SESSION['nome'] = "";
         header("Location: index.php");
     }
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +21,7 @@
 </head>
 <body>
     <header id="headerAdmin">
-        <a href="index.php">
+        <a href="relatorio.php">
             <img id="logoCabecalho" src="./imagens/logoCabecalho.png" alt="">
         </a>
         <input id="pesquisa" type="text">

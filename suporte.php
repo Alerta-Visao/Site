@@ -80,17 +80,24 @@
                         margin-left: 20%;
                         margin-right: 20%;
                         text-align: start;">
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Sed do eiusmod tempor
-                    incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat. Duis aute
-                    irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident,
-                    sunt in culpa qui officia deserunt mollit anim
-                    id est laborum.
+
+                        
+                        
+<p align="left">
+  <strong>ºGarantia</strong>
+  <br>
+O produto vem com garantia de 12 meses, cobrindo possíveis defeitos de fabricação.
+
+<br><br>
+<strong>ºDuração da bateria</strong>
+<br>
+A bateria do Boné Sensorial é de longa duração, garantindo que o dispositivo permaneça ativo durante todo o dia, sem interrupções.
+
+<br><br>
+<strong>ºResistência</strong>
+<br>
+O boné é projetado para ser resistente, mas recomenda-se evitar exposição prolongada à chuva intensa ou condições extremas.
+
                 </p>
             </div>
             <div style="margin-top: 20%;" id="secao1Chamado">

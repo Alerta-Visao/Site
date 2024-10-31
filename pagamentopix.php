@@ -18,6 +18,126 @@
     <link rel="stylesheet" href="estilo.css">
     <script src="./script.js"></script>
     <title>Formas de Pagamento</title>
+    <style>
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  .payment-container {
+    width: 400px;
+    padding: 20px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .payment-container h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .qr-code {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    margin: 0 auto 20px;
+  }
+
+  .instruction {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .pix-code {
+    background-color: #f3f3f3;
+    padding: 10px;
+    font-size: 12px;
+    color: #333;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
+
+  .copy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd966;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .copy-button:hover {
+    background-color: #ffcc33;
+  }
+
+  
+<style>
+  .qr-and-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .qr-code {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    flex-shrink: 0;
+  }
+
+  .text-container {
+    flex: 1;
+    text-align: left;
+  }
+
+  .payment-container img {
+    max-width: 80%; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
+    display: block; /* Garante que a imagem seja um bloco dentro do contêiner */
+  }
+
+  .payment-container {
+    width: 1000px; /* Aumentado de 400px para 600px */
+    padding: 30px; /* Aumentado de 20px para 30px */
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.qr-and-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    flex-shrink: 0;
+}
+
+.text-container {
+    flex: 1;
+    text-align: left;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+</style>
 </head>
 <body>
     <header>
@@ -73,68 +193,52 @@
     <center style="margin-top: 1%;">
         <div id="secao1Titulo">
             <a href="compra.php">
-                <img src="./imagens/botaoVoltar.png" alt="">
+            
             </a>
-            <h2 class="textoBranco">Escolha a forma que deseja pagar</h2>
+            <h2 class="textoBranco" align=center>QRCODE</h2>
         </div>
-        <div style="display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border: 2px solid white;
-                    margin-left: 15%;
-                    margin-right: 15%;
-                    padding-top: 2%;
-                    padding-bottom: 2%;
-                    margin-bottom: 5%;" 
-            id="secao1">
-            <img src="./imagens/logoCartao.png" alt="">
-            <div style="font-size: 130%; font-weight: bold;
-                        margin-left: 3%; margin-right: 30%;" class="textoBranco">
-                Cartão de crédito
-            </div>
-            <a href="cartao.php" style="font-size: 130%; padding-left: 2%;
-                      padding-right: 2%;"     
-                id="botaoEntrar">Selecionar</a>
-        </div>
+        <br> <br>
+   <div class="payment-container">
+    <h2>Pagamento via Pix</h2>
+    <div class="qr-and-text">
+        <img src="./imagens/qrcode.png" alt="QR Code" class="qr-code">
+        <div class="text-container">
+            <p class="instruction">
+                Leia o QR code com o aplicativo de seu banco para finalizar a compra.
+            </p>
+            <p class="instruction">
+                Se preferir, copie o código abaixo e insira-o no aplicativo para completar a transação.
+            </p>
+            <div class="pix-code" id="pixCode"></div>
+<div class="button-container">
+    <button class="copy-button" onclick="copyPixCode()">Copiar código</button>
+</div>
+    </div>
+</div>
 
-        <div style="display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border: 2px solid white;
-                    margin-left: 15%;
-                    margin-right: 15%;
-                    padding-top: 2%;
-                    padding-bottom: 2%;
-                    margin-bottom: 5%;" 
-            id="secao1">
-            <img src="./imagens/logoPix.png" alt="">
-            <div style="font-size: 130%; font-weight: bold;
-                        margin-left: 15%; margin-right: 30%;" class="textoBranco">
-              Pix
-            </div>
-            <a href="pagamentopix.php" style="font-size: 130%; padding-left: 2%;
-                      padding-right: 2%;"     
-                id="botaoEntrar">Selecionar</a>
-        </div>
+<script>
+  function generateRandomPixCode() {
+    let pixCode = "00020126360014BR.GOV.BCB.PIX0114";
+    pixCode += Math.random().toString().slice(2, 16); // Generate random 14-digit ID
+    pixCode += "BR5927YourName6008City62070503***6304";
+    pixCode += Math.floor(Math.random() * 10000).toString().padStart(4, '0'); // Generate random checksum
+    return pixCode;
+  }
 
-        
-        <!-- <div style="display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border: 2px solid white;
-                    margin-left: 15%;
-                    margin-right: 15%;
-                    padding-top: 2%;
-                    padding-bottom: 2%;" 
-            id="secao1">
-            <img src="./imagens/logoPix.png" alt="">
-            <div style="font-size: 130%; font-weight: bold;
-                        margin-left: 3%; margin-right: 42%;" class="textoBranco">
-                Pix
-            </div>
-            <a href="pix.php" style="font-size: 130%; padding-left: 2%;
-            padding-right: 2%;" id="botaoEntrar">Selecionar</a>
-        </div> -->
-    </center>
+  function displayPixCode() {
+    const pixCodeElement = document.getElementById('pixCode');
+    pixCodeElement.innerText = generateRandomPixCode();
+  }
+
+  function copyPixCode() {
+    const pixCode = document.getElementById('pixCode').innerText;
+    navigator.clipboard.writeText(pixCode).then(() => {
+      alert('Código copiado para a área de transferência!');
+    });
+  }
+  displayPixCode();
+</script>
 </body>
 </html>
+
+
