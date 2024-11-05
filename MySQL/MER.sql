@@ -1,99 +1,86 @@
 -- Criando o banco de dados
-CREATE DATABASE alertavisao;
+CREATE DATABASE alertavisao2;
 -- Usando o banco de dados
-USE alertavisao;
+USE alertavisao2;
 
-drop database alertavisao;
-
-CREATE TABLE chamadosabertos(
-    chamadosabertos INT PRIMARY KEY AUTO_INCREMENT ,
-     chamado INT,
- categoria varchar(45) not null,
- datachamado varchar(45) not null,
-  FOREIGN KEY (chamado) REFERENCES chamado(chamado)
+-- Tabela 'chamado' deve ser criada antes de 'chamadosabertos'
+CREATE TABLE chamado (
+    chamado INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(45) NOT NULL,
+    sobrenome VARCHAR(45) NOT NULL,
+    telefone VARCHAR(45) NOT NULL,
+    email VARCHAR(45) NOT NULL,
+    categoria VARCHAR(45) NOT NULL,
+    descreveproblema VARCHAR(255) NOT 
 );
 
--- Relação do chamado enviado com analise do chamado aberto
-CREATE TABLE chamado(
-  chamado INT AUTO_INCREMENT PRIMARY KEY,
-    nome varchar(45) not null,
-    sobrenome varchar(45) not null,
-    telefone varchar(45) not null,
-    email varchar(45) not null,
-    categoria varchar(45) not null,
-    descreveproblema varchar(45) not null
+-- Tabela para chamados abertos, referenciando a tabela 'chamado' -- APAGAR
+CREATE TABLE chamadosabertos (
+    id INT PRIMARY KEY AUTO_INCREMENT, 
+    chamado INT NOT NULL,
+    categoria VARCHAR(45) NOT NULL,
+    datachamado DATE NOT NULL,
+    FOREIGN KEY (chamado) REFERENCES chamado(chamado)
 );
 
-CREATE TABLE vendasrealizadas(
-    vendasrealizadas INT AUTO_INCREMENT PRIMARY KEY,
-    cartao int,
-	categoriavenda varchar(45) not null,
-	statusvendas varchar(45)  not null,
-    FOREIGN KEY (cartao) REFERENCES cartao(cartao)
-);
-
-
-
-CREATE TABLE cartao(
+-- Tabela 'compracartao' (referenciada por 'vendasrealizadas') deve ser criada antes de 'vendasrealizadas'
+CREATE TABLE compracartao (
     cartao INT AUTO_INCREMENT PRIMARY KEY,
-	numeroCartao  varchar(45)  not null,
-	dataValidade varchar(45)  not null,
-    codSeguranca  varchar(45)  not null,
-    nomeTitular  varchar(45)  not null
-    );
-
-create table administrador(
- administrador INT AUTO_INCREMENT PRIMARY KEY,
-    vendasrealizda
-int,
-	categoriavenda varchar(45) not null,
-	statusvendas varchar(45)  not null,
-    FOREIGN KEY (cartao) REFERENCES cartao(cartao)
+    numeroCartao VARCHAR(45) NOT NULL,
+    dataValidade VARCHAR(45) NOT NULL,
+    codSeguranca VARCHAR(45) NOT NULL,
+    nomeTitular VARCHAR(45) NOT NULL
 );
 
+-- Tabela de vendas realizadas, referenciando a tabela 'compracartao'
+CREATE TABLE vendasrealizadas (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    cartao INT NOT NULL,
+    categoriavenda VARCHAR(45) NOT NULL,
+    statusvendas VARCHAR(45) NOT NULL,
+    FOREIGN KEY (cartao) REFERENCES compracartao(cartao)
+);
 
--- usuario para ambas as jornadas
-create table Usuario(
-	codigo int not null auto_increment primary key, 
-	nome varchar (100) not null,
-    telefone varchar(100) not null,
-    email varchar(50) not null,
-    login varchar (100) not null,
-    senha varchar(100) not  null,
-    tipo varchar(20) not null
-   )Engine=InnoDB;
-   
--- Só criar duas tabelas caso os dados de pessoa Assistida seja diferente da de pessoa Acompanhante
-create table Assistida(
-	codigo int not null auto_increment primary key, 
-	nome varchar (100) not null,
-    sobrenome varchar(100) not null,
-    telefone varchar(100) not null,
-    email varchar(50) not null,
-    codAcompanhante int (20) not null
-	)Engine=InnoDB;
- 
-create table Acompanhante(  
-	codigo int not null auto_increment primary key, 
-	nome varchar (100) not null,
-    sobrenome varchar(100) not null,
-    telefone varchar(100) not null,
-    email varchar(50) not null,
-    login varchar (100) not null,
-    senha varchar(100) not  null
-)Engine=InnoDB;
- 
- 
-alter table Assistida add constraint aacompanhante foreign key(codAcompanhante)
-references Acompanhante(codigo);
+-- Tabela de usuários para diferentes jornadas
+CREATE TABLE Usuario (
+    codigo INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(100) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    login VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL,
+    tipo VARCHAR(20) NOT NULL
+) ENGINE=InnoDB;
 
-select * from Usuario;
-select * from chamadosabertos;
-select * from chamado;
-select * from vendasrealizadas;
-select * from cartao;
-select * from Acompanhante;
-select * from Assistida;
-select * from Usuario;
+-- Tabela para pessoa assistida
+CREATE TABLE Assistida (
+    codigo INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    sobrenome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(100) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    codAcompanhante INT NOT NULL
+) ENGINE=InnoDB;
 
- 
+-- Tabela para acompanhante
+CREATE TABLE Acompanhante (
+    codigo INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    sobrenome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(100) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    login VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL
+) ENGINE=InnoDB;
+
+-- Chave estrangeira para 'Assistida', referenciando 'Acompanhante'
+ALTER TABLE Assistida
+ADD CONSTRAINT fk_aacompanhante FOREIGN KEY (codAcompanhante)
+REFERENCES Acompanhante(codigo);
+
+-- Comandos de seleção para testar as tabelas
+SELECT * FROM Usuario;
+SELECT * FROM chamadosabertos;
+SELECT * FROM chamado;
+SELECT * FROM vendasrealizadas;
+SELECT * FROM compracartao;

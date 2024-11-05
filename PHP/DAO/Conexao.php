@@ -5,7 +5,7 @@
         
         function conectar(){
             try{
-                $conn = mysqli_connect('db4free.net', 'alertavisao','12345678', 'alertavisao'); //fazendo a conexão(local, usuario, senha, nome do banco de dados)
+                $conn = mysqli_connect('193.203.175.94', 'u928301259_alertavisao', 'meuBone123', 'u928301259_alertavisao'); //fazendo a conexão(local, usuario, senha, nome do banco de dados)
                 if($conn){
                     // echo "<br>Conectado com Sucesso!";
                     return $conn;

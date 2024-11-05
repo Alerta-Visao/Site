@@ -37,6 +37,7 @@
             class="menu" href="suporte.php">
                 Suporte
             </a>
+           
             <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <img src="imagens/botaoAcessarUsuario.png" alt="">
             </a>
@@ -74,22 +75,21 @@
         <h2 class="textoBranco">Quem somos nós?</h2>
         <div id="secao1">
             <div id="secao1Historia">
-                <h3 style="text-align: start;" class="textoBranco">História</h3>
+                <h3 style="text-align: justify;" class="textoBranco">História</h3>
                 <p style="font-size: 110%;
-                          text-align: start;" 
+                          text-align: justify;" 
                     class="textoBranco">
-                    A Alerta Visão nasceu em fevereiro de 2024, motivada pela necessidade de promover a inclusão e a autonomia de pessoas com deficiência visual. A ideia surgiu quando um grupo de alunos do Senac São Bernardo, da turma TI18N do curso de Técnico de Informática, se uniu para desenvolver uma solução inovadora. Após meses de pesquisa e desenvolvimento, criaram um boné estiloso, equipado com sensores ultrassônicos em um suporte de 360 graus. Este produto revolucionário permite que os usuários identifiquem obstáculos acima da altura do corpo, proporcionando maior liberdade e segurança em suas caminhadas diárias.  
-                </p>
+                   Fundada em fevereiro de 2024, a Alerta Visão visa auxiliar pessoas com deficiência visual. A ideia surgiu de alunos do Senac São Bernardo que criaram um boné moderno com sensores ultrassônicos em 360 graus. Esse produto inovador ajuda os usuários a detectar obstáculos acima da altura do corpo, oferecendo mais liberdade e segurança em suas atividades cotidianas.
             </div>
             <div style="font-size: 110%;
-            text-align: start;"  id="secao1MissaoVisaoValores">
+            text-align: justify;"  id="secao1MissaoVisaoValores">
                 <h3 class="textoBranco">Missão</h3>
                 <p class="textoBranco">
-                    Na Alerta Visão, buscamos apoiar pessoas com deficiência visual por meio de soluções inovadoras que garantam autonomia, segurança e inclusão social. Acreditamos que todos merecem viver plenamente, e fundamentamos nosso trabalho em estudos e pesquisas para transformar essa visão em realidade, utilizando tecnologia acessível e promovendo conscientização. 
+                 Apoiar pessoas com deficiência visual com soluções inovadoras que garantam liberdade, bem-estar e integração social. Usamos tecnologia acessível para transformar vidas.
                 </p>
                 <h3 class="textoBranco">Visão</h3>
                 <p class="textoBranco">
-                    Na Alerta Visão, valorizamos a diversidade e buscamos criar produtos inclusivos que atendam às necessidades de todos. Estamos comprometidos com a inovação e o desenvolvimento de soluções que melhorem a qualidade de vida das pessoas com deficiência visual. Acreditamos que a autonomia é fundamental, oferecendo produtos que proporcionam liberdade e segurança. Também nos dedicamos a impactar positivamente a comunidade, apoiando iniciativas de inclusão e acessibilidade. Por fim, priorizamos a qualidade em cada etapa do nosso processo, garantindo a segurança e eficácia de nossos produtos. 
+                    Valorizamos a diversidade com produtos inclusivos. Inovamos para melhorar a vida das pessoas com deficiência visual, promovendo liberdade e proteção. Contribuímos para a sociedade com iniciativas de inclusão e acessibilidade, garantindo sempre a qualidade e eficácia em nossos produtos.
                 </p>
             </div>
         </div>

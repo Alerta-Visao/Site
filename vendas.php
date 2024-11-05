@@ -140,7 +140,7 @@
 
                     <th>ID do pedido</th> 
 
-                    <th>Informação</th> 
+                    <th>Nome Do titular</th> 
 
                     <th>Status</th> 
 

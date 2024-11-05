@@ -78,10 +78,13 @@
                     Ver detalhes
                 </a>
             </div>
-            <div id="secao1QuemSomos">
-                <h2 style="text-align: start" class="textoBranco">Quem somos nós?</h2>
-                <p style="font-size: 130%; text-align: start;" class="textoBranco">
-                Motivados pela necessidade de promover a inclusão e a autonomia de pessoas com deficiência visual, surgimos quando apareceu o desafio de desenvolver uma solução inovadora. Após meses de pesquisa e desenvolvimento, criamos um boné estiloso, equipado com sensores ultrassônicos em um suporte de 360º. Este produto revolucionário permite que os usuários identifiquem obstáculos acima da altura do corpo, proporcionando maior...  
+            <div id="secao1QuemSomos" style=" margin: 0 auto;
+          max-width: 70%;
+          padding: 1em; ">
+                <h2 style="text-align: justify" class="textoBranco">Quem somos nós?</h2>
+                <p style="font-size: 130%; text-align: justify;" class="textoBranco">
+             Nascemos da vontade de criar uma solução inovadora para a inclusão e autonomia de pessoas com deficiência visual. A partir de um desafio instigante, desenvolvemos um boné moderno, equipado com sensores ultrassônicos em um suporte de 360º. Este produto revolucionário permite que os usuários identifiquem obstáculos acima da altura do corpo, proporcionando maior segurança e liberdade para se movimentar com confiança.
+ 
                 <br>
                 <div style="text-align:center">
                 <a href="quemSomos.php" id="botaoCadastrar" align=center>Ver mais</a>
